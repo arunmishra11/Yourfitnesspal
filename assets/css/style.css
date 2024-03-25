@@ -1,0 +1,64 @@
+*{
+    margin:0%;
+    padding:0%; 
+  }
+  
+  body{
+     background-image: url(/assets/images/fit.jpg);
+     background-size: 100%;
+     color: rgb(227, 224, 231);
+  }
+   
+  nav{
+     display: flex;
+     justify-content: center;
+     justify-content: space-around;
+     margin-top: 20px;
+  }
+  
+  nav h1{
+     font-size: 50px;
+  }
+  
+  ul{
+     display: flex;
+  }
+  
+  ul li a{
+     margin-inline: 30px;
+     font-size: 25px;
+  }
+  
+  ul button{
+     width:100px;
+     height:50px;
+     background-color: red;
+     color:white;
+     font-size: 18px;
+     border:none;
+  }
+  
+  .text{
+     margin-left: 10%;
+     margin-top:140px;
+  }
+  
+  .text h1{
+     font-size:50px;
+  }
+  
+  .text p{
+     font-size:25px;
+     margin-top: 20px;
+  }
+  
+  .text button{
+     width:150px;
+     height:50px;
+     background-color: red;
+     color:white;
+     border:none;
+     margin-top:150px;
+     font-size:25px;
+  }
+  
