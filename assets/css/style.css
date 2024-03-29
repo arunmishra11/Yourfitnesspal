@@ -14,46 +14,47 @@ body {
 
 .header {
     position: fixed;
-   
-    
     width: 100%;
-    padding: 1.3rem 10%;
+    padding: 1.5rem 10%;
     background: rgba(134, 136, 153, 0.838);
     opacity: 1;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    
+
 
 }
 
 .logo {
-    font-size: 30px;
+    font-size: 50px;
     color: rgb(234, 241, 241);
     text-decoration: none;
-    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-   
-    
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+
 
 }
+
 .navbar a {
-    font-size: 18px;
+    font-size: 25px;
     color: white;
     text-decoration: none;
-    font-weight: 500;
     margin-left: 2.5rem;
+    align-items: center;
 
 }
-nav ul:hover {
-    color: rgb(22, 192, 64);
-  }
- #btn{
-    margin-left: 35px;
-    background-color: rgba(100, 109, 163, 0.61);
-    background: white;
-    border: 2px solid;
-    padding:2px;
- }
 
+#join {
 
+    display: inline-flex;
+    padding: 10px;
+    margin-left: 10px;
+    justify-content: center;
 
+}
+
+@media screen and (minwidth: 375px) {
+    .navbar {
+        flex-direction: row;
+    }
+}
