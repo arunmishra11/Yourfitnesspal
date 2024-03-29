@@ -6,6 +6,66 @@
 }
 
 body {
+    background-image: url('../images/hero.jpg');
+    min-height: 100vh;
+    background-size: cover;
+    background-position: center;
+}
+
+.header {
+    position: fixed;
+   
+    
+    width: 100%;
+    padding: 1.3rem 10%;
+    background: rgba(134, 136, 153, 0.838);
+    opacity: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+
+}
+
+.logo {
+    font-size: 30px;
+    color: rgb(234, 241, 241);
+    text-decoration: none;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+   
+    
+
+}
+.navbar a {
+    font-size: 18px;
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 2.5rem;
+
+}
+nav ul:hover {
+    color: rgb(22, 192, 64);
+  }
+ #btn{
+    margin-left: 35px;
+    background-color: rgba(100, 109, 163, 0.61);
+    background: white;
+    border: 2px solid;
+    padding:2px;
+ }
+
+
+
+
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
     background-image: url('/assets/images/hero.jpg');
     min-height: 100vh;
     background-size: cover;
