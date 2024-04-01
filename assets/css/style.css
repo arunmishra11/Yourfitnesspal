@@ -1,10 +1,12 @@
+/* Global styles */
 * {
-    margin: 0%;
-    padding: 0%;
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
     font-family: sans-serif;
 }
 
+/* Body styles */
 body {
     background-image: url('../images/hero.jpg');
     min-height: 100vh;
@@ -12,66 +14,7 @@ body {
     background-position: center;
 }
 
-.header {
-    position: fixed;
-   
-    
-    width: 100%;
-    padding: 1.3rem 10%;
-    background: rgba(134, 136, 153, 0.838);
-    opacity: 1;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    
-
-}
-
-.logo {
-    font-size: 30px;
-    color: rgb(234, 241, 241);
-    text-decoration: none;
-    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-   
-    
-
-}
-.navbar a {
-    font-size: 18px;
-    color: white;
-    text-decoration: none;
-    font-weight: 500;
-    margin-left: 2.5rem;
-
-}
-nav ul:hover {
-    color: rgb(22, 192, 64);
-  }
- #btn{
-    margin-left: 35px;
-    background-color: rgba(100, 109, 163, 0.61);
-    background: white;
-    border: 2px solid;
-    padding:2px;
- }
-
-
-
-
-* {
-    margin: 0%;
-    padding: 0%;
-    box-sizing: border-box;
-    font-family: sans-serif;
-}
-
-body {
-    background-image: url('/assets/images/hero.jpg');
-    min-height: 100vh;
-    background-size: cover;
-    background-position: center;
-}
-
+/* Header styles */
 .header {
     position: fixed;
     width: 100%;
@@ -81,40 +24,93 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-
-
+    flex-direction: row; 
 }
 
+/* Logo styles */
 .logo {
     font-size: 50px;
-    color: rgb(234, 241, 241);
     text-decoration: none;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    transition: color 0.3s ease; 
+}
+
+/* Add CSS for logo image */
+.logo-img {
+    float: left; 
+    height: 80px;  
+    margin-right: 20px; 
+    border-radius: 50%; 
+    
+}
 
 
+/* Navbar styles */
+.navbar {
+    
+    display: flex;
+    flex-direction: row; 
+    justify-content: flex-end; 
+}
 
+.navbar ul {
+    list-style-type: none;
+    font-style: bold;
+    
 }
 
 .navbar a {
-    font-size: 25px;
-    color: white;
+    font-size: 30px;
     text-decoration: none;
     margin-left: 2.5rem;
     align-items: center;
-
+    transition: color 0.3s ease; 
+    font-style: bold;
 }
 
-#join {
+/* Change logo color to yellow below 567px */
+@media screen and (max-width: 567px) {
+    .logo {
+        color: yellow;
+    }
+}
 
+/* Change navbar ul color to yellow below 444px */
+@media screen and (max-width: 567px) {
+    .navbar ul {
+        color: yellow;
+    }
+}
+
+/* Join button styles */
+#join {
     display: inline-flex;
     padding: 10px;
     margin-left: 10px;
     justify-content: center;
-
 }
 
-@media screen and (minwidth: 375px) {
-    .navbar {
-        flex-direction: row;
+/* Media query for responsiveness */
+@media screen and (max-width: 567px) {
+    .header {
+        flex-direction: column; 
+        align-items: center; 
+    }
+}
+/* Keyframes for flashing animation */
+@keyframes flash {
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+/* Join button styles */
+#join button {
+    animation: flash 1s infinite; 
+}
+@media screen and (max-width: 447px) {
+    .logo {
+        flex-direction: column; 
+        align-items: center; 
     }
 }
