@@ -17,7 +17,7 @@
 
 /* Header styles */
 .header {
-    position: fixed;
+    position: relative;
     width: 100%;
     padding: 1.5rem 10%;
     background: rgba(134, 136, 153, 0.838);
@@ -25,7 +25,7 @@
     justify-content: space-between;
     align-items: center;
     flex-direction: row; 
-    z-index: 100;
+    
 }
 
 /* Logo styles */
@@ -133,3 +133,27 @@
         align-items: center; 
     }
 }
+
+/* Media query for responsiveness below 669px */
+@media screen and (max-width: 669px) {
+    #map-section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    #map {
+        width: 100%; /* Adjust map width to fill the screen */
+        height: 300px; /* Set a fixed height for the map */
+    }
+    
+    #locations {
+        margin-top: 20px; /* Add some margin between map and locations */
+    }
+    
+    .location {
+        width: 100%; /* Make locations occupy full width */
+    }
+}
+
+
