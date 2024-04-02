@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="./assets/css/style.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
-    <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCu0uB6GfyMbNM0b4YsVahS0NSJ6-oZtx0&callback=console.debug&libraries=maps,marker&v=beta"></script>
+    <!-- <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCu0uB6GfyMbNM0b4YsVahS0NSJ6-oZtx0&callback=console.debug&libraries=maps,marker&v=beta"></script> -->
 </head>
 
 
@@ -24,7 +24,7 @@
             <ul>
                 <a href="#">About</a>
                 <a href="#">Membership</a>
-                <a href="#">Locations</a>
+                <a href="#locations">Locations</a>
                 <a href="#">Newsletter</a>
                 <!--modal toggle-->
                 <div id="join">
@@ -87,17 +87,36 @@
             </div>
         </div>
     </div>
-    <section id = "map-section">
-        <h3>Locations:</h3>
-        <div id="map">
-            <gmp-map center="30.288501739501953,-97.70755767822266" zoom="14" map-id="DEMO_MAP_ID">
+    <h3 class="text-3xl font-bold dark:text-white text-center my-10">View Our Locations</h3>
+    <section id = "map-section" class="grid grid-cols-2 gap-4">
+        <div id="locations">
+            <a data-lat="30.288501739501953" data-lon="-97.70755767822266" class ="location block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700 mb-2">
+                <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">East Austin</h5>
+                <p class="font-normal text-gray-700 dark:text-gray-400">3822 Airport Blvd, Austin TX, 78722</p>
+                <p class="font-normal text-gray-700 dark:text-gray-400">Hours: 9AM-7PM daily</p>
+            </a>
+            <a data-lat="30.339024432806347" data-lon="-97.739579136445" class ="location block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700 mb-2">
+                <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Allendale</h5>
+                <p class="font-normal text-gray-700 dark:text-gray-400">6318 Burnet Rd, Austin, TX 78757</p>
+                <p class="font-normal text-gray-700 dark:text-gray-400">Hours: 9AM-7PM daily</p>
+            </a>
+            <a data-lat="30.23925814947754" data-lon="-97.7888941738356" class ="location block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700 mb-2">
+                <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">South Lamar</h5>
+                <p class="font-normal text-gray-700 dark:text-gray-400">3600 S Lamar Blvd, Austin, TX 78704</p>
+                <p class="font-normal text-gray-700 dark:text-gray-400">Hours: 9AM-7PM daily</p>
+            </a>
+        </div>
+        <div id="map"></div>
+            <!-- <gmp-map center="30.288501739501953,-97.70755767822266" zoom="14" map-id="DEMO_MAP_ID">
                 <gmp-advanced-marker position="30.288501739501953,-97.70755767822266" title="My location"></gmp-advanced-marker>
-              </gmp-map>
+              </gmp-map> -->
         </div>
     </section>
     
-
+    <script>(g=>{var h,a,k,p="The Google Maps JavaScript API",c="google",l="importLibrary",q="__ib__",m=document,b=window;b=b[c]||(b[c]={});var d=b.maps||(b.maps={}),r=new Set,e=new URLSearchParams,u=()=>h||(h=new Promise(async(f,n)=>{await (a=m.createElement("script"));e.set("libraries",[...r]+"");for(k in g)e.set(k.replace(/[A-Z]/g,t=>"_"+t[0].toLowerCase()),g[k]);e.set("callback",c+".maps."+q);a.src=`https://maps.${c}apis.com/maps/api/js?`+e;d[q]=f;a.onerror=()=>h=n(Error(p+" could not load."));a.nonce=m.querySelector("script[nonce]")?.nonce||"";m.head.append(a)}));d[l]?console.warn(p+" only loads once. Ignoring:",g):d[l]=(f,...n)=>r.add(f)&&u().then(()=>d[l](f,...n))})
+        ({key: "AIzaSyCu0uB6GfyMbNM0b4YsVahS0NSJ6-oZtx0", v: "weekly"});</script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="./assets/js/script.js"></script>
 
 </body>

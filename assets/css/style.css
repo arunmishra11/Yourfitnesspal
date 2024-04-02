@@ -68,11 +68,23 @@
 }
 
 #map-section {
-    margin-top: 10px;
+    margin-top: 12px;
+    padding-bottom: 5%;
 }
 #map {
-    height: 500px;
-    width: 500px;
+    width: 80%;
+    height: 100%;
+}
+
+#locations {
+    display: flex;
+    flex-direction: column;
+    justify-content: right;
+    align-items: end;
+}
+
+.location {
+    width: 317px;
 }
 
 /* Change logo color to yellow below 567px */
