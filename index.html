@@ -6,13 +6,12 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Your FintessPal</title>
     <link rel="stylesheet" href="./assets/css/style.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    
     <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
+    <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCu0uB6GfyMbNM0b4YsVahS0NSJ6-oZtx0&callback=console.debug&libraries=maps,marker&v=beta"></script>
 </head>
 
 
@@ -21,7 +20,6 @@
         <img class="logo-img" src="assets/images/logo.jpg" alt="Your FitnessPal Logo">
         <a href="#" class="logo">Your FitnessPal</a>
         
-        </label>
         <nav class="navbar">
             <ul>
                 <a href="#">About</a>
@@ -37,9 +35,8 @@
                 </div>
             </ul>
         </nav>
-
-
     </header>
+    <img id = hero src="./assets/images/hero.jpg">
     <div id="authentication-modal" tabindex="-1" aria-hidden="true"
         class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
         <div class="relative p-4 w-full max-w-md max-h-full">
@@ -90,23 +87,19 @@
             </div>
         </div>
     </div>
-</div>
+    <section id = "map-section">
+        <h3>Locations:</h3>
+        <div id="map">
+            <gmp-map center="30.288501739501953,-97.70755767822266" zoom="14" map-id="DEMO_MAP_ID">
+                <gmp-advanced-marker position="30.288501739501953,-97.70755767822266" title="My location"></gmp-advanced-marker>
+              </gmp-map>
+        </div>
+    </section>
     
 
-
-  
-  <!-- Main modal -->
-  
-  
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
-
-
-
-
-    <!-- Main modal -->
-
-
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+    <script src="./assets/js/script.js"></script>
+
 </body>
 
 </html>
