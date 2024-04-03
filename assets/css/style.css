@@ -7,9 +7,20 @@
 }
 
 /* Body styles */
-body {
+/* body {
     background-image: url('../images/hero.jpg');
     min-height: 100vh;
+    background-size: cover;
+    background-position: center;
+} */
+
+
+
+.muscle {
+    height: 800px;
+    width: 100%;
+    margin-bottom: 25px;
+    background-image: url("../images/hero.jpg");
     background-size: cover;
     background-position: center;
 }
@@ -67,6 +78,43 @@ body {
     transition: color 0.3s ease; 
     font-style: bold;
 }
+
+.container {
+    display: flex;
+    justify-content: center;
+}
+
+.card {
+    width: 290px;
+    height: 425px;
+    margin: 15px;
+    border-radius: 40px;
+    padding:20px;
+    border
+}
+
+.card-1 {
+    background: linear-gradient(330.17deg, white 18.22%, goldenrod 84.39%);
+}
+
+.card-2 {
+    background: linear-gradient(330.17deg, white 18.22%, silver 84.39%);
+
+}
+
+.card-3 {
+    background: linear-gradient(330.17deg, white 18.22%, lightblue 84.39%);
+
+}
+
+.card-image {
+
+    height: 150px;
+    margin-bottom: 15px;
+
+}
+
+
 
 /* Change logo color to yellow below 567px */
 @media screen and (max-width: 567px) {
