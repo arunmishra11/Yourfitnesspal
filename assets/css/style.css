@@ -7,35 +7,25 @@
 }
 
 /* Body styles */
-/* body {
-    background-image: url('../images/hero.jpg');
+#hero {
     min-height: 100vh;
     background-size: cover;
     background-position: center;
-} */
-
-
-
-.muscle {
-    height: 800px;
-    width: 100%;
-    margin-bottom: 25px;
-    background-image: url("../images/hero.jpg");
-    background-size: cover;
-    background-position: center;
+    z-index: -100;
+    display: block;
 }
 
 /* Header styles */
 .header {
-    position: fixed;
+    position: relative;
     width: 100%;
     padding: 1.5rem 10%;
     background: rgba(134, 136, 153, 0.838);
-    opacity: 1;
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-direction: row; 
+    
 }
 
 /* Logo styles */
@@ -52,9 +42,7 @@
     height: 80px;  
     margin-right: 20px; 
     border-radius: 50%; 
-    
 }
-
 
 /* Navbar styles */
 .navbar {
@@ -79,42 +67,25 @@
     font-style: bold;
 }
 
-.container {
+#map-section {
+    margin-top: 12px;
+    padding-bottom: 5%;
+}
+#map {
+    width: 80%;
+    height: 100%;
+}
+
+#locations {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: right;
+    align-items: end;
 }
 
-.card {
-    width: 290px;
-    height: 425px;
-    margin: 15px;
-    border-radius: 40px;
-    padding:20px;
-    border
+.location {
+    width: 317px;
 }
-
-.card-1 {
-    background: linear-gradient(330.17deg, white 18.22%, goldenrod 84.39%);
-}
-
-.card-2 {
-    background: linear-gradient(330.17deg, white 18.22%, silver 84.39%);
-
-}
-
-.card-3 {
-    background: linear-gradient(330.17deg, white 18.22%, lightblue 84.39%);
-
-}
-
-.card-image {
-
-    height: 150px;
-    margin-bottom: 15px;
-
-}
-
-
 
 /* Change logo color to yellow below 567px */
 @media screen and (max-width: 567px) {
@@ -162,3 +133,27 @@
         align-items: center; 
     }
 }
+
+/* Media query for responsiveness below 669px */
+@media screen and (max-width: 669px) {
+    #map-section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    #map {
+        width: 100%; /* Adjust map width to fill the screen */
+        height: 300px; /* Set a fixed height for the map */
+    }
+    
+    #locations {
+        margin-top: 20px; /* Add some margin between map and locations */
+    }
+    
+    .location {
+        width: 100%; /* Make locations occupy full width */
+    }
+}
+
+

@@ -1,0 +1,33 @@
+body {
+    background-color: black;
+    display: block;
+}
+
+.navbar {
+    font-size: 30px;
+    margin-left: 1700px;
+    background-color: darkgray;
+    margin-top: -70px;
+}
+
+h1 {
+    color: white;
+    text-align: center;
+}
+
+h2 {
+    color: white;
+    text-align: center;
+}
+
+p {
+    color: white;
+}
+
+#api-data {
+    color: white;
+}
+
+div {
+    color: white;
+}

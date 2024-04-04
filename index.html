@@ -6,13 +6,12 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Your FintessPal</title>
     <link rel="stylesheet" href="./assets/css/style.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    
     <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
+    <!-- <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCu0uB6GfyMbNM0b4YsVahS0NSJ6-oZtx0&callback=console.debug&libraries=maps,marker&v=beta"></script> -->
 </head>
 
 
@@ -21,26 +20,23 @@
         <img class="logo-img" src="assets/images/logo.jpg" alt="Your FitnessPal Logo">
         <a href="#" class="logo">Your FitnessPal</a>
         
-        </label>
         <nav class="navbar">
             <ul>
                 <a href="#">About</a>
-                <a href="#membership-options">Membership</a>
-                <a href="#">Locations</a>
-                <a href="#">Newsletter</a>
+                <a href="#">Membership</a>
+                <a href="#locations">Locations</a>
+                <a href="newsletter.html">Newsletter</a>
                 <!--modal toggle-->
                 <div id="join">
                     <button data-modal-target="authentication-modal" data-modal-toggle="authentication-modal"
                         class="block text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
                         type="button">
-                        Join Us </button>
+                        Log In </button>
                 </div>
             </ul>
         </nav>
-
-
     </header>
-    
+    <img id = hero src="./assets/images/hero.jpg">
     <div id="authentication-modal" tabindex="-1" aria-hidden="true"
     class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
     <div class="relative p-4 w-full max-w-md max-h-full">
@@ -49,7 +45,7 @@
                 <!-- Modal header -->
                 <div class="flex items-center justify-between p-4 md:p-5 border-b rounded-t dark:border-gray-600">
                     <h3 class="text-xl font-semibold text-gray-900 dark:text-white">
-                        Create an Account with Us
+                        Login with Us
                     </h3>
                     <button type="button"
                         class="end-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white"
@@ -79,211 +75,49 @@
                                 <input type="password" name="password" id="password" placeholder="••••••••"
                                 class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
                                 required />
-                            </div>
-                            
-                            <button type="submit"
-                            class="w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Create an account</button>
-                            <div class="text-sm font-medium text-gray-500 dark:text-gray-300">
-                                
-                            </div>
-                        </form>
-                    </div>
+                        </div>
+
+                        <button type="submit"
+                            class="w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Sign into your account</button>
+                        <div class="text-sm font-medium text-gray-500 dark:text-gray-300">
+
+                        </div>
+                    </form>
                 </div>
         </div>
     </div>
-</div>
-<section class="muscle"></section>
-<main>
-<section class="container">
-        <div class="card card-1">
-            <div class="card-image">
-                <p class="text-5xl font-bold tracking-tight">GOLD+</p>
-                <span class="text-3xl font-semibold">$</span>
-    <span class="text-5xl font-extrabold tracking-tight">49</span>
-    <span class="ms-1 text-xl font-normal text-black dark:text-black">/month</span>
+    <h3 class="text-3xl font-bold dark:text-white text-center my-10">View Our Locations</h3>
+    <section id = "map-section" class="grid grid-cols-2 gap-4">
+        <div id="locations">
+            <a data-lat="30.288501739501953" data-lon="-97.70755767822266" class ="location block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700 mb-2">
+                <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">East Austin</h5>
+                <p class="font-normal text-gray-700 dark:text-gray-400">3822 Airport Blvd, Austin TX, 78722</p>
+                <p class="font-normal text-gray-700 dark:text-gray-400">Hours: 9AM-7PM daily</p>
+            </a>
+            <a data-lat="30.339024432806347" data-lon="-97.739579136445" class ="location block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700 mb-2">
+                <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Allendale</h5>
+                <p class="font-normal text-gray-700 dark:text-gray-400">6318 Burnet Rd, Austin, TX 78757</p>
+                <p class="font-normal text-gray-700 dark:text-gray-400">Hours: 9AM-7PM daily</p>
+            </a>
+            <a data-lat="30.23925814947754" data-lon="-97.7888941738356" class ="location block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700 mb-2">
+                <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">South Lamar</h5>
+                <p class="font-normal text-gray-700 dark:text-gray-400">3600 S Lamar Blvd, Austin, TX 78704</p>
+                <p class="font-normal text-gray-700 dark:text-gray-400">Hours: 9AM-7PM daily</p>
+            </a>
+        </div>
+        <div id="map"></div>
+            <!-- <gmp-map center="30.288501739501953,-97.70755767822266" zoom="14" map-id="DEMO_MAP_ID">
+                <gmp-advanced-marker position="30.288501739501953,-97.70755767822266" title="My location"></gmp-advanced-marker>
+              </gmp-map> -->
+        </div>
+    </section>
     
-            
-            <ul role="list" class="space-y-5 my-7">
-    <li class="flex items-center">
-    <svg class="flex-shrink-0 w-4 h-4 text-green-500 dark:text-green-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
-    <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"/>
-    </svg>
-    <span class="text-base font-bold leading-tight text-black dark:text-gray-400 ms-3">Access to any club</span>
-    </li>
-    <li class="flex">
-    <svg class="flex-shrink-0 w-4 h-4 text-green-500 dark:text-green-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
-    <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"/>
-    </svg>
-    <span class="text-base font-bold leading-tight text-black dark:text-gray-400 ms-3">Bring a guest anytime</span>
-    </li>
-    <li class="flex">
-    <svg class="flex-shrink-0 w-4 h-4 text-green-500 dark:text-green-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
-    <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"/>
-    </svg>
-    <span class="text-base font-bold leading-tight text-black dark:text-gray-400 ms-3">Tanning Beds</span>
-    </li>
-    <li class="flex decoration-gray-500">
-    <svg class="flex-shrink-0 w-4 h-4 text-green-500 dark:text-green-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
-    <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"/>
-    </svg>
-    <span class="text-base font-bold leading-tight text-black ms-3">YFP+ premium digital workouts</span>
-    </li>
-    <li class="flex decoration-gray-500">
-    <svg class="flex-shrink-0 w-4 h-4 text-green-500 dark:text-green-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
-    <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"/>
-    </svg>
-    <span class="text-base font-bold leading-tight text-black ms-3">Free towles</span>
-    </li>
-    <li class="flex decoration-gray-500">
-    <svg class="flex-shrink-0 w-4 h-4 text-green-500 dark:text-green-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
-    <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"/>
-    </svg>
-    <span class="text-base font-bold leading-tight text-black ms-3">25% of all instore items </span>
-    </li>
-   
-    </ul>
-    <button type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-200 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-900 font-medium rounded-lg text-sm px-5 py-2.5 inline-flex justify-center w-full text-center">Choose plan</button>
-</div>
-
-</div>
-
-
-<div class="card card-2">
-        <div class="card-image">
-            <p class="text-5xl font-bold tracking-tight" >PREMIUM</p>
-            <span class="text-3xl font-semibold">$</span>
-<span class="text-5xl font-extrabold tracking-tight">39</span>
-<span class="ms-1 text-xl font-normal text-gray-500 dark:text-gray-400">/month</span>
-
-
-<ul role="list" class="space-y-5 my-7">
-<li class="flex items-center">
-<svg class="flex-shrink-0 w-4 h-4 text-green-500 dark:text-green-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
-<path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"/>
-</svg>
-<span class="text-base font-bold leading-tight text-black dark:text-gray-400 ms-3">Access to any club</span>
-</li>
-<li class="flex">
-<svg class="flex-shrink-0 w-4 h-4 text-green-500 dark:text-green-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
-<path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"/>
-</svg>
-<span class="text-base font-bold leading-tight text-black dark:text-gray-400 ms-3">Bring a guest anytime</span>
-</li>
-<li class="flex decoration-gray-500">
-<svg class="flex-shrink-0 w-4 h-4 text-green-500 dark:text-green-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
-<path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"/>
-</svg>
-<span class="text-base font-bold leading-tight text-black ms-3">YFP+ premium digital workouts</span>
-</ul>
-<button type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-200 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-900 font-medium rounded-lg text-sm px-5 py-2.5 inline-flex justify-center w-full text-center padding-20px">Choose plan</button>
-</div>
-</div>
-
-
-<div class="card card-3">
-    <div class="card-image">
-        <p class="text-5xl font-bold tracking-tight">PREMIUM</p>
-            <span class="text-3xl font-semibold">$</span>
-<span class="text-5xl font-extrabold tracking-tight">29</span>
-<span class="ms-1 text-xl font-normal text-gray-500 dark:text-gray-400">/month</span>
-
-
-<ul role="list" class="space-y-5 my-7">
-<li class="flex items-center">
-<svg class="flex-shrink-0 w-4 h-4 text-green-500 dark:text-green-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
-<path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"/>
-</svg>
-<span class="text-base font-bold leading-tight text-black dark:text-gray-400 ms-3">Access to any club</span>
-</li>
-<li class="flex">
-<svg class="flex-shrink-0 w-4 h-4 text-green-500 dark:text-green-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
-<path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"/>
-</svg>
-<span class="text-base font-bold leading-tight text-black dark:text-gray-400 ms-3">Bring a guest anytime</span>
-</li>
-
-
-</ul>
-<button type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-200 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-900 font-medium rounded-lg text-sm px-5 py-2.5 inline-flex justify-center w-full text-center">Choose plan</button>
-</div>
-</section>
-
-
-    
-
-<!-- 
-<div class="w-full max-w-sm p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-8 dark:bg-gray-800 dark:border-gray-700">
-    <h5 class="mb-4 text-xl font-medium text-gray-500 dark:text-gray-400">Standard plan</h5>
-    <div class="flex items-baseline text-gray-900 dark:text-white">
-    <span class="text-3xl font-semibold">$</span>
-    <span class="text-5xl font-extrabold tracking-tight">49</span>
-    <span class="ms-1 text-xl font-normal text-gray-500 dark:text-gray-400">/month</span>
-    </div>
-    <ul role="list" class="space-y-5 my-7">
-    <li class="flex items-center">
-    <svg class="flex-shrink-0 w-4 h-4 text-blue-700 dark:text-blue-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
-    <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"/>
-    </svg>
-    <span class=" dark:text-gray-400 ms-3">2 team members</span>
-    </li>
-    <li class="flex">
-    <svg class="flex-shrink-0 w-4 h-4 text-blue-700 dark:text-blue-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
-    <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"/>
-    </svg>
-    <span class="text-base font-bold leading-tight text-black dark:text-gray-400 ms-3">20GB Cloud storage</span>
-    </li>
-    <li class="flex">
-    <svg class="flex-shrink-0 w-4 h-4 text-blue-700 dark:text-blue-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
-    <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"/>
-    </svg>
-    <span class="text-base font-bold leading-tight text-black dark:text-gray-400 ms-3">Integration help</span>
-    </li>
-    <li class="flex line-through decoration-gray-500">
-    <svg class="flex-shrink-0 w-4 h-4 text-gray-400 dark:text-gray-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
-    <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"/>
-    </svg>
-    <span class="text-base font-bold leading-tight text-black ms-3">Sketch Files</span>
-    </li>
-    <li class="flex line-through decoration-gray-500">
-    <svg class="flex-shrink-0 w-4 h-4 text-gray-400 dark:text-gray-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
-    <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"/>
-    </svg>
-    <span class="text-base font-bold leading-tight text-black ms-3">API Access</span>
-    </li>
-    <li class="flex line-through decoration-gray-500">
-    <svg class="flex-shrink-0 w-4 h-4 text-gray-400 dark:text-gray-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
-    <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"/>
-    </svg>
-    <span class="text-base font-bold leading-tight text-black ms-3">Complete documentation</span>
-    </li>
-    <li class="flex line-through decoration-gray-500">
-    <svg class="flex-shrink-0 w-4 h-4 text-gray-400 dark:text-gray-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
-    <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"/>
-    </svg>
-    <span class="text-base font-bold leading-tight text-black ms-3">24×7 phone & email support</span>
-    </li>
-    </ul>
-    <button type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-200 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-900 font-medium rounded-lg text-sm px-5 py-2.5 inline-flex justify-center w-full text-center">Choose plan</button>
-    </div>
-     -->
-
-</main>
-
-
-
-
-<!-- Main modal -->
-
-  
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
-
-
-
-
-    <!-- Main modal -->
-
-
+    <script>(g=>{var h,a,k,p="The Google Maps JavaScript API",c="google",l="importLibrary",q="__ib__",m=document,b=window;b=b[c]||(b[c]={});var d=b.maps||(b.maps={}),r=new Set,e=new URLSearchParams,u=()=>h||(h=new Promise(async(f,n)=>{await (a=m.createElement("script"));e.set("libraries",[...r]+"");for(k in g)e.set(k.replace(/[A-Z]/g,t=>"_"+t[0].toLowerCase()),g[k]);e.set("callback",c+".maps."+q);a.src=`https://maps.${c}apis.com/maps/api/js?`+e;d[q]=f;a.onerror=()=>h=n(Error(p+" could not load."));a.nonce=m.querySelector("script[nonce]")?.nonce||"";m.head.append(a)}));d[l]?console.warn(p+" only loads once. Ignoring:",g):d[l]=(f,...n)=>r.add(f)&&u().then(()=>d[l](f,...n))})
+        ({key: "AIzaSyCu0uB6GfyMbNM0b4YsVahS0NSJ6-oZtx0", v: "weekly"});</script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="./assets/js/script.js"></script>
+
 </body>
 
 </html>
