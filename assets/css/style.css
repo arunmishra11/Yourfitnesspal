@@ -116,6 +116,7 @@
 .container {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
    
     
 }
@@ -150,6 +151,13 @@
     height: 150px;
     margin-bottom: 15px;
 
+}
+
+.card:hover {
+    background: rgb(62,62,62);
+    color:white;
+    transform: scale(1.10);
+    transition: all 1s ease;
 }
 
 

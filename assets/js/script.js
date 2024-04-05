@@ -1,5 +1,10 @@
-//need to add an eventListner for join now bottom//localstorage etc.,
-mapsApiKey = 'AIzaSyCu0uB6GfyMbNM0b4YsVahS0NSJ6-oZtx0'
+//references for modal inputs
+const emailInput = document.querySelector('#email');
+const passwordInput = document.querySelector('#password');
+const submitButton = document.querySelector('#submit');
+const $targetEl = document.getElementById('modal');
+
+renderLastRegistered();
 
 // Initialize and add the map
 let map;
@@ -42,6 +47,34 @@ function panToLocation() {
 initMap();
 
 $("#locations").on("click", ".location", panToLocation)
+
+
+function renderLastRegistered() {
+  const email = localStorage.getItem('email');
+  const password = localStorage.getItem('password');
+
+  if (!email || !password) {
+    return;
+  }
+
+  userEmailSpan.textContent = email;
+  userPasswordSpan.textContent = password;
+}
+
+submitButton.addEventListener('click', function (event) {
+  event.preventDefault();
+  const email = emailInput.value;
+  const password = passwordInput.value;
+  localStorage.setItem('email', email);
+  localStorage.setItem('password', password);
+  renderLastRegistered();
+ 
+  const modal = new Modal($targetEl);
+  console.log('Modal instance created:', modal);
+  modal.hide();
+  }
+  
+);
 
 
 
