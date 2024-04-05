@@ -1,5 +1,7 @@
-//need to add an eventListner for join now bottom//localstorage etc.,
-mapsApiKey = 'AIzaSyCu0uB6GfyMbNM0b4YsVahS0NSJ6-oZtx0'
+//references for modal inputs
+const emailInput = document.querySelector('#email');
+const passwordInput = document.querySelector('#password');
+const submitButton = document.querySelector('#submit');
 
 // Initialize and add the map
 let map;
@@ -42,6 +44,16 @@ function panToLocation() {
 initMap();
 
 $("#locations").on("click", ".location", panToLocation)
+
+submitButton.addEventListener('click', function (event) {
+  event.preventDefault();
+  const email = emailInput.value;
+  const password = passwordInput.value;
+  localStorage.setItem('email', email);
+  localStorage.setItem('password', password);
+  renderLastRegistered();
+  }
+);
 
 
 
