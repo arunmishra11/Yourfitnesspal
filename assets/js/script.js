@@ -2,6 +2,7 @@
 const emailInput = document.querySelector('#email');
 const passwordInput = document.querySelector('#password');
 const submitButton = document.querySelector('#submit');
+const $targetEl = document.getElementById('modal');
 
 // Initialize and add the map
 let map;
@@ -52,7 +53,11 @@ submitButton.addEventListener('click', function (event) {
   localStorage.setItem('email', email);
   localStorage.setItem('password', password);
   renderLastRegistered();
+ 
+  const modal = new Modal($modal);
+  modal.hide();
   }
+  
 );
 
 
