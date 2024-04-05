@@ -4,7 +4,7 @@ const passwordInput = document.querySelector('#password');
 const submitButton = document.querySelector('#submit');
 const $targetEl = document.getElementById('modal');
 
-renderLastRegistered();
+
 
 // Initialize and add the map
 let map;
