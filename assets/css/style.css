@@ -103,6 +103,65 @@
     width: 317px;
 }
 
+
+.muscle {
+    height: 800px;
+    width: 100%;
+    margin-bottom: 50px;
+    background-image: url("../images/hero.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+   
+    
+}
+
+.card {
+    width: 290px;
+    height: 475px;
+    margin: 15px;
+    border-radius: 40px;
+    padding:20px;
+    min-width: 290px;
+
+
+}
+
+.card-1 {
+    background: linear-gradient(330.17deg, white 18.22%, goldenrod 84.39%);
+}
+
+.card-2 {
+    background: linear-gradient(330.17deg, white 18.22%, silver 84.39%);
+
+}
+
+.card-3 {
+    background: linear-gradient(330.17deg, white 18.22%, lightblue 84.39%);
+
+}
+
+.card-image {
+
+    height: 150px;
+    margin-bottom: 15px;
+
+}
+
+
+
+@media screen and (max-width: 945px) {
+    .container {
+        flex-direction: column; 
+        align-items: center;
+    }
+
+}
+
 /* Change logo color to yellow below 567px */
 @media screen and (max-width: 567px) {
     .logo {
