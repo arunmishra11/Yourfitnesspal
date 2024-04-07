@@ -3,16 +3,45 @@ body {
     display: block;
 }
 
-.navbar {
-    font-size: 30px;
-    margin-left: 1700px;
-    background-color: darkgray;
-    margin-top: -70px;
+
+@media screen and (max-width: 567px) {
+    .header {
+        flex-direction: column; 
+        align-items: center; 
+    }
 }
+
+@media screen and (max-width: 567px) {
+    .navbar {
+      font-size: 16px;  
+      margin-left: auto;  
+      background-color: darkgray;  
+    }
+  }
+  
+  .header {
+    height: 650px;  
+    padding: 10px;  
+  }
+
+.logo {
+    align-items: left;
+    margin-top: -900px;
+}
+
+.navbar {
+    font-size: 30px;  
+    background-color: darkgray;  
+    position: absolute;
+    top: 0;  
+    right: 0;  
+  }
+  
 
 h1 {
     color: white;
     text-align: center;
+    font-size: 45px;
 }
 
 h2 {
@@ -31,3 +60,4 @@ p {
 div {
     color: white;
 }
+
