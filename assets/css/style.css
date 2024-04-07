@@ -173,14 +173,14 @@
 /* Change logo color to yellow below 567px */
 @media screen and (max-width: 567px) {
     .logo {
-        color: yellow;
+        color: rgb(16, 16, 13);
     }
 }
 
 /* Change navbar ul color to yellow below 444px */
 @media screen and (max-width: 567px) {
     .navbar ul {
-        color: yellow;
+        color: rgb(47, 17, 218);
     }
 }
 
@@ -199,17 +199,7 @@
         align-items: center; 
     }
 }
-/* Keyframes for flashing animation */
-@keyframes flash {
-    0% { opacity: 1; }
-    50% { opacity: 0; }
-    100% { opacity: 1; }
-}
 
-/* Join button styles */
-#join button {
-    animation: flash 1s infinite; 
-}
 @media screen and (max-width: 447px) {
     .logo {
         flex-direction: column; 
@@ -238,5 +228,25 @@
         width: 100%; /* Make locations occupy full width */
     }
 }
+
+/* Existing styles */
+
+@media (max-width: 500px) {
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar ul {
+        display: flex;
+        flex-direction: column;
+        gap: 10px; /* Adjust as needed */
+    }
+
+    #join {
+        margin-top: 20px; /* Adjust as needed */
+    }
+}
+
 
 
