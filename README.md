@@ -14,6 +14,10 @@ This is a website template for a fictional gym called "Your FitnessPal." The web
 
 This website template is designed for a gym business to showcase their services and allow users to explore membership options, find gym locations, subscribe to newsletters, and log in to their accounts.
 
+![Web Application Preview](assets/images/webpage.png)
+
+The built application is located at: https://arunmishra11.github.io/Yourfitnesspal/
+
 ## Features
 
 - **Membership Options**: The website offers three gym membership options: GOLD+, PREMIUM, and CLASSIC, each with different features and pricing.
