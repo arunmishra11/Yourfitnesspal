@@ -4,8 +4,6 @@ const passwordInput = document.querySelector('#password');
 const submitButton = document.querySelector('#submit');
 const $targetEl = document.getElementById('modal');
 
-
-
 // Initialize and add the map
 let map;
 
@@ -45,21 +43,8 @@ function panToLocation() {
 }
 
 initMap();
-
+// Local storage 
 $("#locations").on("click", ".location", panToLocation)
-
-
-function renderLastRegistered() {
-  const email = localStorage.getItem('email');
-  const password = localStorage.getItem('password');
-
-  if (!email || !password) {
-    return;
-  }
-
-  userEmailSpan.textContent = email;
-  userPasswordSpan.textContent = password;
-}
 
 submitButton.addEventListener('click', function (event) {
   event.preventDefault();
@@ -67,11 +52,6 @@ submitButton.addEventListener('click', function (event) {
   const password = passwordInput.value;
   localStorage.setItem('email', email);
   localStorage.setItem('password', password);
-  renderLastRegistered();
- 
-  const modal = new Modal($targetEl);
-  console.log('Modal instance created:', modal);
-  modal.hide();
   }
   
 );
