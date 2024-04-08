@@ -37,6 +37,7 @@ async function initMap() {
     })
 }
 
+//zoom into location on the map
 function panToLocation() {
     var coords = new google.maps.LatLng($(this).data('lat'), $(this).data('lon'));
     map.panTo(coords);
@@ -47,7 +48,7 @@ initMap();
 
 $("#locations").on("click", ".location", panToLocation)
 
-
+//save user info to local storage
 submitButton.addEventListener('click', function (event) {
   event.preventDefault();
   const email = emailInput.value;
