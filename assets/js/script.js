@@ -2,7 +2,6 @@
 const emailInput = document.querySelector('#email');
 const passwordInput = document.querySelector('#password');
 const submitButton = document.querySelector('#submit');
-const $targetEl = document.getElementById('modal');
 
 
 
@@ -38,6 +37,7 @@ async function initMap() {
     })
 }
 
+//zoom into location on the map
 function panToLocation() {
     var coords = new google.maps.LatLng($(this).data('lat'), $(this).data('lon'));
     map.panTo(coords);
@@ -48,30 +48,13 @@ initMap();
 
 $("#locations").on("click", ".location", panToLocation)
 
-
-function renderLastRegistered() {
-  const email = localStorage.getItem('email');
-  const password = localStorage.getItem('password');
-
-  if (!email || !password) {
-    return;
-  }
-
-  userEmailSpan.textContent = email;
-  userPasswordSpan.textContent = password;
-}
-
+//save user info to local storage
 submitButton.addEventListener('click', function (event) {
   event.preventDefault();
   const email = emailInput.value;
   const password = passwordInput.value;
   localStorage.setItem('email', email);
   localStorage.setItem('password', password);
-  renderLastRegistered();
- 
-  const modal = new Modal($targetEl);
-  console.log('Modal instance created:', modal);
-  modal.hide();
   }
   
 );
