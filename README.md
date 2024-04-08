@@ -41,3 +41,11 @@ This website template is designed for a gym business to showcase their services 
 ## License
 
 This project is licensed under the [MIT License](https://opensource.org/licenses/MIT) - see the [LICENSE](LICENSE) file for details.
+
+
+
+
+![Screenshot 2024-04-08 165518](https://github.com/arunmishra11/Yourfitnesspal/assets/153470839/4ac8771f-858e-4ecd-acce-4ad20e0486e8)
+![Screenshot 2024-04-08 173147](https://github.com/SailorVirgo/prework-study-guide/assets/153470839/0431d5fb-3fc2-439d-b615-060450b9e8e4)
+![Screenshot 2024-04-08 173200](https://github.com/SailorVirgo/prework-study-guide/assets/153470839/61c645ff-5fd1-4084-b3e4-eabf9df32701)
+
